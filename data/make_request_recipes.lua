@@ -55,7 +55,7 @@ local make_recipe = function(item)
     icons = item.icons,
     ingredients =
     {
-      {type = "item", name = "transport-drone", amount = 1},
+      {type = "item", name = "transport-drone", amount = 1,},
       {type = "fluid", name = fuel, amount = 5000}
     },
     results =
@@ -78,7 +78,8 @@ local make_recipe = function(item)
     allow_as_intermediate = false,
     allow_intermediates = true,
     allow_inserter_overload = false,
-    energy_required = 2 ^ 50
+    energy_required = 2 ^ 50,
+    allow_quality = false
   }
   data:extend{recipe}
 end

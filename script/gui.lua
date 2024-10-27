@@ -56,7 +56,6 @@ end
 local get_filter_value = function(player)
   local frame = get_frame(player)
   if not frame then return end
-  --game.print(serpent.line(frame.inner_frame.subheader_frame.depot_filter_button.elem_value))
   return frame.inner_frame.subheader_frame.depot_filter_button.elem_value
 end
 
@@ -74,7 +73,7 @@ local get_item_icon_and_locale = function(name)
     return cache[name]
   end
 
-  local items = game.item_prototypes
+  local items = prototypes.item
   if items[name] then
     local icon = "item/"..name
     local locale = items[name].localised_name
@@ -83,7 +82,7 @@ local get_item_icon_and_locale = function(name)
     return value
   end
 
-  local fluids = game.fluid_prototypes
+  local fluids = prototypes.fluid
   if fluids[name] then
     local icon = "fluid/"..name
     local locale = fluids[name].localised_name
@@ -100,14 +99,14 @@ local get_signal_id = function(name)
     return signal_cache[name]
   end
 
-  local items = game.item_prototypes
+  local items = prototypes.item
   if items[name] then
     local value = {type = "item", name = name}
     signal_cache[name] = value
     return value
   end
 
-  local fluids = game.fluid_prototypes
+  local fluids = prototypes.fluid
   if fluids[name] then
     local value = {type = "fluid", name = name}
     signal_cache[name] = value
@@ -691,7 +690,7 @@ local refresh_network_gui = function(player, selected_index)
 
   if not network then return end
 
-  local inner = frame.add{type = "frame", style = "inside_deep_frame_for_tabs", name = "inner_frame", direction = "vertical"}
+  local inner = frame.add{type = "frame", style = "mod_gui_inside_deep_frame", name = "inner_frame", direction = "vertical"}
   local subheader = inner.add{type = "flow", name = "subheader_frame"}
   subheader.style.vertical_align = "center"
   local pusher = subheader.add{type = "empty-widget"}
@@ -764,7 +763,7 @@ local open_gui = function(player, network_index)
 
   local drop_down = title_flow.add{type = "drop-down", name = "road_network_drop_down"}
 
-  title_flow.add{type = "sprite-button", style = "frame_action_button", sprite = "utility/close_white", name = "close_road_network_gui"}
+  title_flow.add{type = "sprite-button", style = "frame_action_button", sprite = "utility/close", name = "close_road_network_gui"}
 
 
   local selected
@@ -815,7 +814,8 @@ local on_gui_click = function(event)
     local depot_index = gui.name:sub(("open_depot_map_"):len() + 1)
     local depot = depot_common.get_depot_by_index(depot_index)
     if depot then
-      player.zoom_to_world(depot.entity.position, 1)
+      -- player.zoom_to_world(depot.entity.position, 1)
+      player.set_controller({type = defines.controllers.remote,start_position = depot.entity.position,start_zoom= 1})
       close_gui(player)
     end
     return
