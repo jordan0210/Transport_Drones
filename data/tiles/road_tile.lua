@@ -44,7 +44,9 @@ local better_tile = util.copy(data.raw.tile["refined-concrete"])
 better_tile.name = "transport-drone-road-better"
 better_tile.localised_name = {"fast-road"}
 better_tile.tint = {0.5, 0.5, 0.5}
-better_tile.collision_mask = {"ooga wooga error"}
+better_tile.collision_mask = {layers={
+  ground_tile=true
+}}
 better_tile.minable.result = "fast-road"
 better_tile.layer = 62
 better_tile.placeable_by = {{item = "fast-road", count = 1}}

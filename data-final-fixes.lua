@@ -50,7 +50,7 @@ local process_road_item = function(item)
   if not tile then return end
   local seen = {}
   while true do
-    tile.collision_mask = { layers = { roadtd = true} }
+    tile.collision_mask.layers["roadtd"] = true
     table.insert(road_list, tile.name)
     seen[tile.name] = true
     tile = tiles[tile.next_direction or ""]
