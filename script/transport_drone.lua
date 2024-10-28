@@ -883,7 +883,8 @@ transport_drone.on_configuration_changed = function()
       if drone.state == states.going_to_supply then
         local count = drone.requested_count or 0
         local item = drone.requested_item or drone.request_depot.item
-        drone:pickup_from_supply(drone.supply_depot, item, count)
+        local quality = drone.requested_quality or drone.request_depot.quality
+        drone:pickup_from_supply(drone.supply_depot, item,quality, count)
       end
       if drone.state == states.deliver_fuel then
         drone.target_depot.fuel_on_the_way = drone.target_depot.fuel_on_the_way + (drone.fuel_amount or 0)
