@@ -118,9 +118,9 @@ for k, prototype in pairs(collision_mask_util.collect_prototypes_with_layer("pla
   end
 end
 
-if data.raw["assembling-machine"]["mining-depot"] then
-  data.raw["assembling-machine"]["mining-depot"].collision_mask = { layers = { roadtd = true } }
-end
+-- if data.raw["assembling-machine"]["mining-depot"] then
+--   data.raw["assembling-machine"]["mining-depot"].collision_mask = { layers = { roadtd = true } }
+-- end
 
 --Disable belts on roads
 --[[

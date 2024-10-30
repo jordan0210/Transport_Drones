@@ -536,8 +536,8 @@ local get_tiles = function()
     local tile_mask = tile.collision_mask or {}
     if table_size(tile_mask) == table_size(mask) then
       local good = true
-      for layer, bool in pairs (mask) do
-        if not tile_mask[layer] then
+      for layer, bool in pairs (mask.layers) do
+        if not tile_mask.layers[layer] then
           good = false
           break
         end
