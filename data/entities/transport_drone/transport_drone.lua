@@ -285,6 +285,7 @@ local make_unit = function(k)
 
   local unit =
   {
+    hidden_in_factoriopedia= true,
     type = "unit",
     name = name.."-"..k,
     localised_name = {name},
@@ -471,6 +472,7 @@ local make_ore_truck = function(resource, item_name)
 
     local unit =
     {
+      hidden_in_factoriopedia= true,
       type = "unit",
       name = name.."-"..item_name.."-"..k,
       localised_name = {name},
@@ -629,6 +631,7 @@ local make_fluid_truck = function(fluid)
 
     local unit =
     {
+      hidden_in_factoriopedia= true,
       type = "unit",
       name = name.."-"..fluid.name.."-"..k,
       localised_name = {name},
@@ -798,6 +801,7 @@ local make_fuel_truck = function(fluid)
 
     local unit =
     {
+      hidden_in_factoriopedia= true,
       type = "unit",
       name = name.."-fuel-truck-"..k,
       localised_name = {name},

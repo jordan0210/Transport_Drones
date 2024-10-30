@@ -131,6 +131,7 @@ local make_fluid_request_recipe = function(fluid)
 
   local recipe =
   {
+    hidden_in_factoriopedia = true,
     type = "recipe",
     name = "request-"..fluid.name,
     localised_name = {"request-item",{"fluid-name."..fluid.name}},
