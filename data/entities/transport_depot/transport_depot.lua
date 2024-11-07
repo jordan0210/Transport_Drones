@@ -66,7 +66,7 @@ depot.fluid_boxes =
   },
   {
     production_type = "output",
-    volume = 10000000,
+    volume = 1000000,
     pipe_connections = { { flow_direction = "output",direction = defines.direction.south, position = { 0, 1 } } },
     pipe_covers = pipecoverspictures(),
     pipe_picture = assembler3pipepictures(),
@@ -141,7 +141,7 @@ supply_depot.fluid_boxes =
 {
   {
     production_type = "input",
-    volume = 5000,
+    volume = 50,
     base_level = -1,
     pipe_connections = { { flow_direction = "input",direction = defines.direction.north, position = { 0, -1 } } },
   },
@@ -329,13 +329,13 @@ fuel_depot.fluid_boxes =
 {
   {
     production_type = "output",
-    volume = 1000,
+    volume = 10,
     base_level = -1,
     pipe_connections = { { flow_direction = "input-output",direction = defines.direction.north, position = { 0, -2 } } },
   },
   {
     production_type = "input",
-    volume = 1000,
+    volume = 10,
     base_level = -1,
     height = 1,
     pipe_connections = { { flow_direction = "input-output", direction = defines.direction.south,position = { 0, 2 } } },
@@ -488,7 +488,7 @@ fluid_supply_depot.fluid_boxes =
 {
   {
     production_type = "output",
-    volume = 1000,
+    volume = 10,
     base_level = -1,
     pipe_connections = { { flow_direction = "input-output",direction = defines.direction.north, position = { 0, -1 } } },
   },
