@@ -66,7 +66,7 @@ depot.fluid_boxes =
   },
   {
     production_type = "output",
-    volume = 210000,
+    volume = 160000,
     pipe_connections = { { flow_direction = "output",direction = defines.direction.south, position = { 0, 1 } } },
     pipe_covers = pipecoverspictures(),
     pipe_picture = assembler3pipepictures(),
