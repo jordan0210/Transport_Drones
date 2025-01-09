@@ -740,8 +740,8 @@ local on_entity_removed = function(event)
   if not drone then return end
 
   if event.force then
-    entity.force.kill_count_statistics.on_flow("transport-drone-1", 1)
-    event.force.kill_count_statistics.on_flow("transport-drone-1", -1)
+    entity.force.get_kill_count_statistics(entity.surface).on_flow("transport-drone-1", 1)
+    event.force.get_kill_count_statistics(entity.surface).on_flow("transport-drone-1", -1)    
   end
 
   drone:handle_drone_deletion()

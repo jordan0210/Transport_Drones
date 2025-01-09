@@ -7,17 +7,11 @@
   "homepage": "",
   "description": "Adds transport drones and transport depots",
   "dependencies": ["base >= 2.0.7",
-    "(?)deadlock_stacked_recipes",
-    "(?)space-exploration-postprocess",
-    "(?)Krastorio2",
     "(?)apm_recycling",
     "(?)PickerDollies",
-    "(?)SeaBlock",
-    "(?)SpeaceBlock",
     "(?)omnimatter_fluid",
     "(?)omnimatter_compression",
     "(?)alien-biomes",
-    "(?)IndustrialRevolution",
     "(?)quality"
   ],
   "factorio_version": "2.0"
