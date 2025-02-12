@@ -294,8 +294,6 @@ local remove_depot = function(depot, event)
   local index = depot.index
   local x, y = depot.node_position[1], depot.node_position[2]
   remove_depot_from_node(surface, x, y, index)
-  -- log("Depot: " .. serpent.block(script_data.depots))
-  -- log("type: " .. type(index) .. "index: " .. index)
   script_data.depots[index] = nil
   depot:on_removed(event)
 end
