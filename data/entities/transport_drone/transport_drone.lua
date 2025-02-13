@@ -393,7 +393,7 @@ local make_unit = function(k)
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
     {
-      sound = sprite_base.working_sound.main_sounds[3].sound,
+      sound = "__base__/sound/fight/tank-engine.ogg",
       max_sounds_per_type = 5,
       audible_distance_modifier = 0.7
     },
@@ -580,7 +580,7 @@ local make_ore_truck = function(resource, item_name)
       vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound =
       {
-        sound = sprite_base.working_sound.main_sounds[3].sound,
+        sound = "__base__/sound/fight/tank-engine.ogg",
         max_sounds_per_type = 5,
         audible_distance_modifier = 0.7
       },
@@ -739,7 +739,7 @@ local make_fluid_truck = function(fluid)
       vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound =
       {
-        sound = sprite_base.working_sound.main_sounds[3].sound,
+        sound = "__base__/sound/fight/tank-engine.ogg",
         max_sounds_per_type = 5,
         audible_distance_modifier = 0.7
       },
@@ -909,7 +909,7 @@ local make_fuel_truck = function(fluid)
       vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound =
       {
-        sound = sprite_base.working_sound.main_sounds[3].sound,
+        sound = "__base__/sound/fight/tank-engine.ogg",
         max_sounds_per_type = 5,
         audible_distance_modifier = 0.7
       },
