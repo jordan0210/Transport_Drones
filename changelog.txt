@@ -1,4 +1,32 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.20
+Date: 2025-2-13
+  Changes:
+    - Fix: Fixed crashes caused by Mod changes.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.19
+Date: 2025-2-12
+  Changes:
+    - Fix: various fix collection
+    - Fix: 'request-depot' has stopped sending drones endlessly
+    - Remove helper function empty_sprite
+---------------------------------------------------------------------------------------------------
+Version: 1.0.18
+Date: 2024-10-31
+  Changes:
+    - Fixed Fluid depot icon
+---------------------------------------------------------------------------------------------------
+Version: 1.0.17
+Date: 2024-10-31
+  Changes:
+    - Upgrade to API version 2.0.10
+    - Remove the transport drones unit recipe in factoriopedia
+    - Fixed the issue of memory overflow caused by resetting the road network filter being invalid
+    - Disabled the code regarding mining_depot
+    - Fixed the display error of the requested item/fluid name
+    - Fixed the issue with Factoriopedia displaying request recipes
+    - Fixed the issue of the repository fluid output being too slow
+---------------------------------------------------------------------------------------------------
 Version: 1.0.16
 Date: 2024-01-07
   Changes:
