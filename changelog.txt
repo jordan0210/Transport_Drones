@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.24
+Date: 2025-2-13
+  Changes:
+    - Add localization for technology-description and effect-description.
+    - Add Russian localization
+---------------------------------------------------------------------------------------------------
 Version: 1.0.23
 Date: 2025-2-13
   Changes:
