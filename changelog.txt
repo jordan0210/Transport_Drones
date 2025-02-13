@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.21
+Date: 2025-2-13
+  Changes:
+     (Derringer's emergency patch job on Meglinge's fork)
+    - Fixed parameter recipe crashing request depot (Derringer)
+    - Fixed hackiness going crash on emptying fluid requester depot (Derringer)
+    - Transport system technology unlocks crafting iron sticks (Derringer)
+    - Request depot capacity increased to 1M fluid, with some hackiness to help keep up output pressure (Derringer)
+    - Mostly repaired the road network GUI back to a usable state (Derringer)
+    - Fixed crash on destruction of a transport drone now that 2.0 separates kill statistics by surface (Derringer)
+    - Attempted to fix crash on using a depot circuit reader on an empty fluid depot (Derringer)
+---------------------------------------------------------------------------------------------------
 Version: 1.0.20
 Date: 2025-2-13
   Changes:

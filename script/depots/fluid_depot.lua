@@ -132,12 +132,13 @@ function fluid_depot:update_contents()
         content.count = box.amount
       end
     end
-    local signal = section.get_slot(1) 
+    local signal
     if name and content.count and content.count > 0 then
       signal = {value = {type = "fluid", name = name,quality = "normal"}, min = content.count , max = content.count}
-    end
-
     section.set_slot(1, signal)
+	else
+	  section.clear_slot(1)
+    end
   end
 
 end
