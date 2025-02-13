@@ -99,7 +99,9 @@ for k, tile in pairs(tiles) do
       local layerTempList = split(layerTempStr, ",")
       for k, layerTemp in pairs(layerTempList) do
         if layerTemp ~= "true" and layerTemp ~= nil then
-          all_used_tile_collision_masks[layerTemp] = true
+          if not string.find(layerTemp,'%[') then
+            all_used_tile_collision_masks[layerTemp] = true
+          end
           all_used_tile_collision_masks["roadtd"] = nil
         end
       end
@@ -107,7 +109,6 @@ for k, tile in pairs(tiles) do
   end
 end
 
-log(serpent.block(all_used_tile_collision_masks))
 shared.drone_collision_mask = { layers = all_used_tile_collision_masks }
 shared.drone_collision_mask["colliding_with_tiles_only"] = true
 shared.drone_collision_mask["consider_tile_transitions"] = true
