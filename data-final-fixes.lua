@@ -106,9 +106,11 @@ for k, tile in pairs(tiles) do
     end
   end
 end
+
+log(serpent.block(all_used_tile_collision_masks))
 shared.drone_collision_mask = { layers = all_used_tile_collision_masks }
-shared.drone_collision_mask["colliding-with-tiles-only"] = true
-shared.drone_collision_mask["consider-tile-transitions"] = true
+shared.drone_collision_mask["colliding_with_tiles_only"] = true
+shared.drone_collision_mask["consider_tile_transitions"] = true
 --temp
 
 for k, prototype in pairs(collision_mask_util.collect_prototypes_with_layer("player")) do

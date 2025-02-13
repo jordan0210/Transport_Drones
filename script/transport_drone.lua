@@ -639,7 +639,7 @@ function transport_drone:go_to_entity(entity, radius)
 end
 
 local random = math.random
-local drone_path_flags = {prefer_straight_paths = true, use_cache = false, no_break = true}
+local drone_path_flags = {allow_paths_through_own_entities = true, prefer_straight_paths = true, use_cache = false, no_break = true}
 local insert = table.insert
 
 function transport_drone:go_to_depot(depot, radius, sprite_switch)
@@ -741,7 +741,7 @@ local on_entity_removed = function(event)
 
   if event.force then
     entity.force.get_kill_count_statistics(entity.surface).on_flow("transport-drone-1", 1)
-    event.force.get_kill_count_statistics(entity.surface).on_flow("transport-drone-1", -1)
+    event.force.get_kill_count_statistics(entity.surface).on_flow("transport-drone-1", -1)    
   end
 
   drone:handle_drone_deletion()
