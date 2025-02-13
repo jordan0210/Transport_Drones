@@ -25,14 +25,14 @@ local road_tile_list =
   stack_size = 1,
   select =
   {
-    border_color = {1, 1, 1},
-    mode = {"any-tile"},
+    border_color = { 1, 1, 1 },
+    mode = { "any-tile" },
     cursor_box_type = "entity",
   },
   alt_select =
   {
-    border_color = {0, 1, 0},
-    mode = {"any-tile"},
+    border_color = { 0, 1, 0 },
+    mode = { "any-tile" },
     cursor_box_type = "entity",
   }
 }
@@ -50,7 +50,7 @@ local process_road_item = function(item)
   if not tile then return end
   local seen = {}
   while true do
-    tile.collision_mask = { layers = { roadtd = true} }
+    tile.collision_mask = { layers = { roadtd = true } }
     table.insert(road_list, tile.name)
     seen[tile.name] = true
     tile = tiles[tile.next_direction or ""]
@@ -81,10 +81,11 @@ function split(str, delimiter)
   local result = {}
   local pattern = "([^" .. delimiter .. "]+)"
   for match in string.gmatch(str, pattern) do
-      table.insert(result, match)
+    table.insert(result, match)
   end
   return result
 end
+
 local all_used_tile_collision_masks = {}
 for k, tile in pairs(tiles) do
   tile.check_collision_with_entities = true
@@ -97,13 +98,15 @@ for k, tile in pairs(tiles) do
     if #layerTempStr ~= 0 then
       local layerTempList = split(layerTempStr, ",")
       for k, layerTemp in pairs(layerTempList) do
-        all_used_tile_collision_masks[layerTemp] = true
-        all_used_tile_collision_masks["roadtd"] = nil
+        if layerTemp ~= "true" and layerTemp ~= nil then
+          all_used_tile_collision_masks[layerTemp] = true
+          all_used_tile_collision_masks["roadtd"] = nil
+        end
       end
     end
   end
 end
-shared.drone_collision_mask ={layers = all_used_tile_collision_masks}
+shared.drone_collision_mask = { layers = all_used_tile_collision_masks }
 shared.drone_collision_mask["colliding-with-tiles-only"] = true
 shared.drone_collision_mask["consider-tile-transitions"] = true
 --temp
