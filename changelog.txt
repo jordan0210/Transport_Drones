@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.22
+Date: 2025-2-13
+  Changes:
+    - Fixed Fixed the bug where there are objects resembling tracks on the road that cause instant teleportation.
+    - Add some fixes from SanDK
+---------------------------------------------------------------------------------------------------
 Version: 1.0.21
 Date: 2025-2-13
   Changes:
