@@ -73,6 +73,7 @@ end
 
 function fluid_depot:update_contents()
 
+
   local supply = self.road_network.get_network_item_supply(self.network_id)
 
   local new_contents = {}
@@ -118,7 +119,6 @@ function fluid_depot:update_contents()
 
   self.old_contents = new_contents
   -- game.print("contents: " .. serpent.block(new_contents))
-
   if self.circuit_reader and self.circuit_reader.valid then
     local behavior = self.circuit_reader.get_or_create_control_behavior()
     if (behavior.sections_count == 0) then behavior.add_section() end
@@ -140,7 +140,6 @@ function fluid_depot:update_contents()
 	  section.clear_slot(1)
     end
   end
-
 end
 
 function fluid_depot:update()
